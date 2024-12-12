@@ -210,8 +210,8 @@ const questions = [
     answers: [
       { text: "Fígado", correct: false },
       { text: "Intestino", correct: false },
-      { text: "Fêmur", correct: true },
-      { text: "Pele", correct: false },
+      { text: "Fêmur", correct: false },
+      { text: "Pele", correct: true },
     ],
   },
   {
