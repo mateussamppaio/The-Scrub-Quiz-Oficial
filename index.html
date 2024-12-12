@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+  <link rel="icon" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="icon" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" sizes="48x48" href="assets/favicon-48x48.png">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" async></script>
+
+  <title>The Scrub Quiz</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="initial-message">
+      <label for="userName">Digite o nome do jogador:</label>
+      <input type="text" class="userName" placeholder="Nome do jogador">
+      <button class="saveNameButton" onclick="saveName()">Salvar</button>
+
+      <p class="displayName hide"></p>
+    </div>
+    <div class="questions-container hide">
+      <span class="question">Pergunta aqui?</span>
+      <div class="answers-container">
+        <button class="answer button">Resposta 1</button>
+        <button class="answer button">Resposta 2</button>
+        <button class="answer button">Resposta 3</button>
+        <button class="answer button">Resposta 4</button>
+      </div>
+    </div>
+    <div class="initialTheme hide">
+      <h2>Escolha um tema, <span id="playerName"></span>!</h2> <!-- Exibindo o nome do jogador -->
+    </div>
+    
+    <div class="themes hide"> 
+      <button onclick="window.location.href='anatomia.html';" class="theme-one but button">Anatomia</button>
+      <button onclick="window.location.href='fisiologia.html';" class="theme-two but button">Fisiologia</button>
+      <button onclick="window.location.href='semiologia.html';" class="theme-three but button">Semiologia</button>
+      <button onclick="window.location.href='farmacologia.html';" class="theme-four but button">Farmacologia</button>
+    </div>
+    <div class="controls-container">
+      <button class="set-themes button" onclick="setTheme()">Iniciar Quiz</button>
+      <button class="next-question button hide">Próxima pergunta</button>
+    </div>
+  </div>
+</body>
+</html>

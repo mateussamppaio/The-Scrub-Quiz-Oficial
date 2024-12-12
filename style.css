@@ -1,0 +1,274 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-image: url("img/background.png");
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  color: #fff;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container {
+  
+  background-image: url("img/backgroundcontainer.png");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 37%;
+  height: 51.5%;
+  max-width: 800px;
+  margin-top: 7.3%;
+
+  border: 3px solid transparent;
+  border-image: linear-gradient(45deg,#ffde5966,#f65e9a66,#ffde5966,#0cc0df66) 1;
+  padding: 16px;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.questions-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.question {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px thick #f0f7da;
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 0 0 4px 2px;
+}
+
+.answers-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.answer:disabled {
+  cursor: not-allowed;
+}
+
+.next-question {
+  margin-top: 32px;
+}
+
+.button {
+  background-color: #2d6073;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 6px;
+  height: 48px;
+  padding: 3px 16px 3px 16px;
+
+  transition: filter 0.1s;
+}
+
+.button:not(:disabled):hover {
+  filter: brightness(0.8);
+}
+
+.initial-message {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin: -30px 0 100px 0;
+  align-items: center;
+}
+
+.initial-message label{
+  padding: 0px 2px 8px 2px;
+  margin: 0 0 0 12px;
+  display: flex;
+  font-size: 16px ;
+}
+
+.initial-message input {
+  font-size: 10px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 6px;
+  height: 28px;
+  padding: 1px 12px 1px 8px;
+}
+
+.initial-message button {
+  font-family: "Pixelify Sans", sans-serif;
+  background-color: #2d6073;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 6px;
+  height: 28px;
+  margin-bottom: 10px;
+  padding: 1px 12px 1px 8px;
+
+  transition: filter 0.1s;
+}
+
+.initial-message input, button {
+display: inline;
+gap: 10px;
+}
+
+.themes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.initialTheme {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 72px;
+  display: block;
+}
+
+.but{
+  flex: 0 0 36%;
+  padding: 10px 20px;
+  margin-left: 39px;
+  font-size: 16px;
+  background-color: #faad44;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.but:not(:disabled):hover {
+  filter: brightness(0.8);
+}
+
+.set-themes:disabled {
+  cursor: not-allowed;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: contain; /* Ajusta para conter dentro da tela */
+    background-position: top;
+    flex-direction: column; 
+    padding: 8px;
+  }
+
+  .container {
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: auto; /* Permite altura dinâmica */
+    padding: 8px; /* Reduz o preenchimento interno */
+    margin-top: 8%; /* Ajusta o espaço superior */
+  }
+
+  .question {
+    font-size: 16px; /* Fonte menor para caber em telas pequenas */
+    padding: 8px; /* Reduz o preenchimento interno */
+  }
+
+  .answers-container {
+    grid-template-columns: 1fr; /* Respostas empilhadas verticalmente */
+    gap: 12px; /* Espaçamento menor entre as opções */
+  }
+
+  .button {
+    font-size: 14px; /* Botões mais compactos */
+    height: 40px; /* Altura ajustada */
+    padding: 8px; /* Preenchimento menor */
+  }
+
+  .but {
+    flex: 1 1 100%; /* Botões ocupam toda a largura */
+    margin: 0; /* Remove margens laterais */
+    padding: 10px; /* Ajusta tamanho dos botões */
+    font-size: 14px; /* Texto menor no botão */
+  }
+
+  .initial-message {
+    font-size: 14px; /* Texto menor para introduções */
+    margin: 16px 0; /* Ajusta o espaçamento */
+  }
+
+  .final-message {
+    font-size: 16px; /* Texto mais ajustado para o final */
+  }
+}
+
+/* Tablets e smartphones maiores (largura entre 481px e 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    background-size: cover; /* Mantém o estilo de cobertura */
+    background-position: center;
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .container {
+    width: 90%; /* Usa 90% da largura da tela */
+    height: auto;
+    padding: 16px;
+    margin-top: 5%;
+  }
+
+  .question {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .answers-container {
+    grid-template-columns: 1fr 1fr; /* Duas colunas para opções */
+    gap: 16px;
+  }
+
+  .button {
+    font-size: 16px;
+    height: 48px;
+    padding: 12px;
+  }
+
+  .but {
+    flex: 0 0 48%; /* Botões dividem o espaço em duas colunas */
+    margin: 4px;
+    font-size: 16px;
+  }
+
+  .initial-message {
+    font-size: 16px;
+  }
+
+  .final-message {
+    font-size: 18px;
+  }
+}
